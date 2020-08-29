@@ -2,7 +2,7 @@ import React, { createContext } from 'react';
 
 export interface IAuthContext {
     logged: boolean;
-    signIn(client_id: string, secret_id:string): void;
+    signIn(): void;
     signOut(): void;
 }
 

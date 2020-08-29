@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
+      "esnext",
+      "ES2018"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -19,7 +20,6 @@
     "noEmit": true,
     "jsx": "react"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["./rtl.setup.js", "./src/**/*.ts", "./src/**/*.tsx", "./test/**/*.ts"],
+  "exclude": ["node_modules", "build", "config", "doc", "env", "public", "scripts", "./src/**/*.test.ts"]
 }
