@@ -5,7 +5,8 @@ const ACCESS_TOKEN = localStorage.getItem('@cyber-access:TOKEN');
 const Cors = axios.create({
   baseURL:'https://cors-anywhere.herokuapp.com',
   headers: {
-    Origin: "X-Requested-With",
+    accept: "application/json",
+    'Access-Control-Allow-Origin': '*',
     mode: "cors",
     cache: "default"
   } 
@@ -19,4 +20,4 @@ const Axios = axios.create({
   },
 });
 
-export  {Axios, Cors};
+export  { Axios, Cors };

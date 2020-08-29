@@ -1,12 +1,8 @@
-import React, { useState, useContext,useMemo, useEffect} from 'react';
-import { useHistory } from "react-router-dom";
+import React, { useState, useContext } from 'react';
 import { AuthContext, IAuthContext } from '../interfaces/AuthContext/index';
-import AuthService from '../services/Auth'; 
-import Loader from '../components/Loader';
 
 const AuthProvider: React.FC = ({ children }) => {
-    const history = useHistory();
-
+    const popUp = window;
     const [logged, setLogged] = useState<boolean>(() => {
         const isLogged = localStorage.getItem('@cyber-access:logged');
 
@@ -14,11 +10,18 @@ const AuthProvider: React.FC = ({ children }) => {
     });
 
     const signIn = async () => {
-        window.open(
+        popUp.open(
             'http://localhost:3000/login-response',
             "Dribbble", 
             "menubar=yes,height=570,width=520,resizable=yes,top=450,left=500,scrollbars=yes,status=yes"
         );        
+    }
+
+    const signInRegister = async ( token:string) => {
+        localStorage.setItem('@cyber-access:logged', 'true');
+        sessionStorage.setItem('@cyber-access:access_token', 'token');      
+        setLogged(true);  
+        popUp?.close(); 
     }
     
     const signOut = () => {
@@ -27,7 +30,7 @@ const AuthProvider: React.FC = ({ children }) => {
     }
 
     return (
-        <AuthContext.Provider value={{logged, signIn, signOut}}>
+        <AuthContext.Provider value={{logged, signIn, signOut, signInRegister}}>
             {children}
         </AuthContext.Provider>
     );

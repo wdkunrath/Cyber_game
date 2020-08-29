@@ -8,10 +8,9 @@ const AuthService = {
         client_id:client_id,
         client_secret:secret_id,
         code:code,
-        redirect_uri: "http://localhost:3000/login-response"
       }
     }).then(function (response: AxiosResponse ) {
-      // handle success
+      // handle success      
       console.log(response);
     })
     .catch(function (error:any) {
