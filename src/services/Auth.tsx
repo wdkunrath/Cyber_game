@@ -1,21 +1,16 @@
-const axios = require('axios');
+import { Cors } from './Axios';
+import { AxiosResponse } from "axios";
 
 const AuthService = {
  getAuthorize: async (client_id: string,secret_id: string, code: string) => {
-    const result = await axios.post('https://cors-anywhere.herokuapp.com/https://dribbble.com/oauth/token',{
-      header: {
-        method: 'GET',
-        header: {"Origin": "null"},
-        mode: 'cors',
-        cache: 'default'
-      },
+    const result = await Cors.post('/https://dribbble.com/oauth/token',{      
       params: {
-        client_id: client_id,
-        secret_id: secret_id,
-        code: code,
-        redirect_uri: 'http://localhost:3000/'
+        client_id:client_id,
+        client_secret:secret_id,
+        code:code,
+        redirect_uri: "http://localhost:3000/login-response"
       }
-    }).then(function (response: any) {
+    }).then(function (response: AxiosResponse ) {
       // handle success
       console.log(response);
     })

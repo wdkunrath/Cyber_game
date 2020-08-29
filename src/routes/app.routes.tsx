@@ -8,8 +8,7 @@ import Loader from '../pages/Loader';
 const AppRoutes: React.FC = () => (
     <Layout>
         <Switch>            
-            <Route path="/" exact component={Home}/>
-            <Route path="/login-response/:code" exact component={Loader}/>
+            <Route path="/" exact component={Home}/>            
         </Switch>
     </Layout>
 );

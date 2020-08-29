@@ -7,7 +7,7 @@ import Loader from '../pages/Loader';
 const AuthRoutes: React.FC = () => (    
     <Switch>
         <Route path="/" exact component={Login}/>
-        <Route path="/login-response/:code" exact component={Loader}/>
+        <Route path="/login-response" exact component={Loader}/>
     </Switch>   
 );
 

@@ -24,6 +24,6 @@ export const LoaderLogin =  styled.div`
         border-left-color: white;
         border-radius: 50%;
         color: ${props => props.theme.colors.black};
-        animation: ${spin} 1s linear infinite;
+        /* animation:  1s linear infinite; */
     }    
 `;
