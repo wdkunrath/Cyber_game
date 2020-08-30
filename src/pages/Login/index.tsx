@@ -2,16 +2,17 @@ import React from 'react';
 import { useAuth } from '../../hooks/auth';  
 import ILogo from '../../assets/image/logoLogin.svg';
 import Button from '../../components/Button';
+
 import { 
     Container,
     Logo,
     Form
 } from './styles';
 
-const Login: React.FC = () => {
+const Login: React.FC = () => {   
     const { signIn } = useAuth();
     
-    return (
+    return ( 
         <Container>
             <Logo>
                 <img src={ILogo} alt="LogoLogin" />

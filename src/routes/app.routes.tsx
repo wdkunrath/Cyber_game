@@ -6,7 +6,7 @@ import Home from '../pages/Login';
 const AppRoutes: React.FC = () => (
     <Layout>
         <Switch>            
-            <Route path="/home" exact component={Home}/>            
+            <Route path="/" exact component={Home}/>            
         </Switch>
     </Layout>
 );

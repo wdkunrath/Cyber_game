@@ -2,7 +2,7 @@ import { Axios } from './Axios';
 
 const HomeService = {
     getList: async () =>{
-        const result = Axios.get('user/shots')
+        const result = await Axios.get('user/shots')
         .then(({ ...response }) => {
             return response;
         })

@@ -36,6 +36,10 @@ module.exports = () => {
       port: 3000,
       publicPath: "/",
       historyApiFallback: true,
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
+      }
     },
     module: {
       rules: [

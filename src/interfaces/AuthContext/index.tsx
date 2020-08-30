@@ -1,7 +1,7 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 export interface IAuthContext {
     logged: boolean;
-    signInRegister(token: string): void;
+    signInRegister(): void;
     signIn(): void;
     signOut(): void;
 }

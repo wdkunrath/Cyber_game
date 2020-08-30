@@ -1,24 +1,16 @@
-import React, { useState, useDebugValue, useEffect } from 'react';
-import ListaMock from '../../mock/lista';
+import React, { useState } from 'react';
 import { Container } from './styles';
-import { IListaContext } from '../../interfaces/ListaContext';
-import HomeService from '../../services/Home';
+import { useHome } from '../../hooks/home';
 
-const Home: React.FC = () => {
-  const [lista, setLista] = useState([]);
-
-  let getList = async () => {
-    const result = await HomeService.getList();
-    setLista(result);
-  }
-
-  console.log(lista);
+const Home: React.FC = ({ children }) => {
+  const { getLista } = useHome();
+  
   return (
     <div>     
         {/* {lista.map(lista => {
           <div key={lista.id} >
-            <img src={lista.img}/>
-            {lista.description} 
+            <img src={lista.images}/>
+            {lista.title} 
           </div>
         })} */}
     </div>

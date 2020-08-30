@@ -2,7 +2,8 @@ import React, { createContext } from 'react';
 
 export interface IListaContext {
     id: number;
-    img : string;
+    images : string;
+    title: string;
     description: string;
 }
 

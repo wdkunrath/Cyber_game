@@ -15,15 +15,5 @@ export const LoaderLogin =  styled.div`
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: ${props => props.theme.colors.primary};
-
-    > div{
-        width: 4;
-        height: 4;
-        border: 2px solid rgba(0, 0, 0, 0.1);
-        border-left-color: white;
-        border-radius: 50%;
-        color: ${props => props.theme.colors.black};
-        /* animation:  1s linear infinite; */
-    }    
+    background-color: ${props => props.theme.colors.primary};     
 `;
