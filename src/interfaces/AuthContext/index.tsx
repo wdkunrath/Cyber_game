@@ -1,5 +1,4 @@
 import React, { createContext } from 'react';
-
 export interface IAuthContext {
     logged: boolean;
     signInRegister(token: string): void;
