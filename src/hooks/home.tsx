@@ -9,6 +9,7 @@ const HomeProvider: React.FC = ({ children }) => {
     const getLista = async (type: string) => {        
         switch (type) {
           case 'mock':
+            console.log(Lista);
             return Lista;            
           case 'drib':
             const result = await HomeService.getList();
@@ -24,23 +25,8 @@ const HomeProvider: React.FC = ({ children }) => {
         }
     }
 
-    const listMock = () => {
-        const listM = getLista('mock');
-        
-        return (
-          <ListMock listComponent={listM}/>
-        )
-      }
-    
-      const listDribbble =() =>{
-        const dribble = getLista('drib');
-        return (
-          <ListDribbble listComponent/>
-        )
-      }
-
     return (
-        <ListaContext.Provider value={{ getLista, listDribbble, listMock}}>
+        <ListaContext.Provider value={{ getLista }}>
             {children}
         </ListaContext.Provider>
     );

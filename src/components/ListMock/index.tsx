@@ -1,16 +1,18 @@
 import React from 'react';
-
+import { useHome } from '../../hooks/home';
 import { Container } from './styles';
 
 const ListMock: React.FC = ({ ...props }) => {
-  const lista = props.listComponent;
-
+  const { getLista } = useHome();
+  
+  const listM = getLista('mock');
+   
   return (
     <Container>
       <h1>Mockado</h1>
-      {lista.map( list => {
+      {/* {listM.map((list) => {
         {list}
-      })}
+      })} */}
     </Container>
   );
 }
