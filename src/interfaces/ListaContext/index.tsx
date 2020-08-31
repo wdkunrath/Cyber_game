@@ -1,10 +1,9 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 
 export interface IListaContext {
-    id: number;
-    images : string;
-    title: string;
-    description: string;
+    getLista(type: string): [];  
+    listMock():void;
+    listDribbble(): void;  
 }
 
 const ListaContext = createContext<IListaContext>({} as IListaContext);

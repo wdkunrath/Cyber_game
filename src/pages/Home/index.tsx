@@ -1,19 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from './styles';
 import { useHome } from '../../hooks/home';
+import TabsComponent from '../../components/TabsComponent';
 
 const Home: React.FC = ({ children }) => {
-  const { getLista } = useHome();
+  const { listMock, listDribbble } = useHome();
   
   return (
-    <div>     
-        {/* {lista.map(lista => {
-          <div key={lista.id} >
-            <img src={lista.images}/>
-            {lista.title} 
+    <Container>    
+      <TabsComponent
+          arrayTabs={["Mockado", "Dribbble"]}
+          arrayContent={[ 
+            listMock,
+            listDribbble,
+          ]}
+        /> 
+      <h1>teste</h1>
+        {/* {getLista.map(list => {
+          <div key={list.id} >
+            <img src={list.images}/>
+            {list.title} 
           </div>
         })} */}
-    </div>
+    </Container>
   );
 }
 
