@@ -1,4 +1,4 @@
-import React, { useState, useContext} from 'react';
+import React, { useState, useContext, useEffect} from 'react';
 import { AuthContext, IAuthContext } from '../interfaces/AuthContext/index';
 
 const AuthProvider: React.FC = ({ children }) => {
@@ -7,7 +7,7 @@ const AuthProvider: React.FC = ({ children }) => {
         const isLogged = localStorage.getItem('@cyber-access:logged');   
             
         return !!isLogged;
-    });
+    });   
 
     const signIn = async () => {    
         popUp.open(
@@ -19,8 +19,8 @@ const AuthProvider: React.FC = ({ children }) => {
 
     const signInRegister = async () => {
         localStorage.setItem('@cyber-access:logged', 'true');            
-        setLogged(true);
-        window.close();
+        setLogged(true); 
+        window.opener.location.reload();
     }
     
     const signOut = () => {

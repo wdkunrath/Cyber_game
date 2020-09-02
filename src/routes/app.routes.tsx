@@ -7,10 +7,8 @@ import { HomeProvider } from '../hooks/home';
 
 const AppRoutes: React.FC = () => (
     <Layout>
-        <Switch>            
-            <HomeProvider>
-                <Route path="/" exact component={Home}/>            
-            </HomeProvider>
+        <Switch>                        
+            <Route path="/" exact component={Home}/> 
         </Switch>
     </Layout>
 );

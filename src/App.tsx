@@ -5,7 +5,7 @@ import Cyber from './styles/themes/cyber';
 import Routes from './routes';
 
 const App: React.FC = () => {
-    
+        
     return (
         <ThemeProvider theme={Cyber}>
             <GlobalStyles/>

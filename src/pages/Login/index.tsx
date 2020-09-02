@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {  useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useAuth } from '../../hooks/auth';  
 import ILogo from '../../assets/image/logoLogin.svg';
 import Button from '../../components/Button';
@@ -9,9 +10,10 @@ import {
     Form
 } from './styles';
 
-const Login: React.FC = () => {   
+
+const Login: React.FC = ({}) => { 
     const { signIn } = useAuth();
-    
+        
     return ( 
         <Container>
             <Logo>
