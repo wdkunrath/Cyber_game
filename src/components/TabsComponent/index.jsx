@@ -1,5 +1,5 @@
 import React from "react";
-//import "./styles.css";
+import { TabsColorActive } from './styles';
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 
@@ -35,7 +35,7 @@ export default function TabsComponent({ arrayTabs = [], arrayContent = [] }) {
 
   return (
     <div>
-      <div>
+      <TabsColorActive>
         <Tabs
           value={value}
           onChange={handleChange}
@@ -45,7 +45,7 @@ export default function TabsComponent({ arrayTabs = [], arrayContent = [] }) {
             <Tab key={index} label={element} {...a11yProps(index)} />
           ))}
         </Tabs>
-      </div>
+      </TabsColorActive>
       {arrayContent.map((element, index) => (
         <TabPanel value={value} index={index} key={index}>
           {element()}

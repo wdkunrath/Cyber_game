@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect} from 'react';
+import React, { useState, useContext } from 'react';
 import { AuthContext, IAuthContext } from '../interfaces/AuthContext/index';
 
 const AuthProvider: React.FC = ({ children }) => {

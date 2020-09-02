@@ -1,7 +1,7 @@
 import { createContext, ReactNode, ReactElement } from 'react';
 
 export interface IListaContext {
-   getLista(type: string) : any ;  
+   getLista(type: string) : void ;  
 }
 
 export interface Ilista{

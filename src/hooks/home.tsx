@@ -1,10 +1,10 @@
-import React, { useContext, Children} from 'react';
+import React, { useContext } from 'react';
 import { IListaContext, ListaContext } from '../interfaces/ListaContext';
 import HomeService from '../services/Home';
 import Lista from '../mock/lista';
 
-const HomeProvider: React.FC<IListaContext> = ({ children}) => {
-  
+const HomeProvider: React.FC<IListaContext> = ({ children }) => {
+
     const getLista = async (type: string) => {        
         switch (type) {
           case 'mock':
