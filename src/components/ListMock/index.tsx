@@ -9,7 +9,7 @@ type props = {
   description?:string;
 }
 
-const ListMock: React.FC<props> = ({ ...props }) => {
+const ListMock: React.FC<props> = () => {
   // const { getLista } = useHome();
   
   // const listM = getLista('mock');
