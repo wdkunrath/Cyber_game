@@ -1,5 +1,4 @@
-import React, {  useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
 import { useAuth } from '../../hooks/auth';  
 import ILogo from '../../assets/image/logoLogin.svg';
 import Button from '../../components/Button';

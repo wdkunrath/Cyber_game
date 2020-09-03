@@ -1,6 +1,7 @@
 import React from 'react';
-import { useHome } from '../../hooks/home';
+//import { useHome } from '../../hooks/home';
 import { Container } from './styles';
+
 
 const ListDribbble: React.FC = () => {
   // const { getLista } = useHome();

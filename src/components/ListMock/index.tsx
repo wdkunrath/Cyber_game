@@ -1,27 +1,26 @@
 import React from 'react';
-import { useHome } from '../../hooks/home';
-import { Container } from './styles';
+import { Container, Card } from './styles';
 
-type props = {
-  id?:number;
-  img?:string;
-  title?:string;
-  description?:string;
-}
+type Ilista = {
+  lista: {
+    id:number;
+    img: string | undefined;
+    title:string | undefined;
+    description:string | undefined;
+  }[]
+};
 
-const ListMock: React.FC<props> = () => {
-  // const { getLista } = useHome();
+const ListMock: React.FC<Ilista> = ({lista}) => {
   
-  // const listM = getLista('mock');
-
-  //console.log(listM);
-   
   return (
-    <Container> 
-      <h1>Mockado</h1>
-      {/* {listM.map((list) => {
-        {list}
-      })} */}
+    <Container>
+      {lista.map(list => 
+      <>
+        <Card key={list?.id}>
+          <img src={list?.img}/>
+        </Card>
+      </>
+      )}
     </Container>
   );
 }
