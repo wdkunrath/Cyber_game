@@ -1,16 +1,18 @@
 import React from 'react';
-//import { useHome } from '../../hooks/home';
-import { Container } from './styles';
+import { Container, Card } from './styles';
+import { IlistaDrib } from '../../interfaces/ListaContext';
 
-
-const ListDribbble: React.FC = () => {
-  // const { getLista } = useHome();
-  
-  // const listM = getLista('drib');
-  
+const ListDribbble: React.FC<IlistaDrib> = ({lista}) => {
+    
   return (
     <Container>
-      <h1>Dribbble</h1>
+      {lista.map(list => 
+      <>
+        <Card key={list?.id}>
+          <img src={list?.html_url}/>
+        </Card>
+      </>
+      )}
     </Container>
   );
 }
